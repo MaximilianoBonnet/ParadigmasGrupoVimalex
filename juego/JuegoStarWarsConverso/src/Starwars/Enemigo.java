@@ -12,7 +12,7 @@ public class Enemigo extends Elemento {
 	public void dibuja(Graphics g) {
 		g.drawImage(imagen,getX(),getY(),getXt(),getXt(),null);
 	}
-	
+	// anima es el que rebota 
 	@Override
 	public void anima() {
 		setX(getX()+getVx());

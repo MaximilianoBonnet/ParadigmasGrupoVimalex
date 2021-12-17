@@ -10,7 +10,7 @@ public abstract class Juego implements ActionListener, KeyListener {
 	public Juego(String titulo, int ancho, int alto){
 		area = new AreaDibujo(titulo, ancho, alto);
 		area.addKeyListener(this);
-		temporizador = new Temporizador(50,this);
+		temporizador = new Temporizador(80,this);
 	}
 	
 	public void start(){

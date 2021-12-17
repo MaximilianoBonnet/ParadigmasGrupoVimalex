@@ -3,6 +3,7 @@ package BaseDelJuego;
 import java.awt.*;
 import java.util.ArrayList;
 
+import javax.sound.sampled.Clip;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -14,6 +15,7 @@ public class AreaDibujo extends JPanel {
 	 */
 	private static final long serialVersionUID = 1L;
 	private ArrayList<Dibujable> objs;
+	private Clip sonido;
 	
 	public AreaDibujo(String titulo, int ancho, int alto){
 		
@@ -31,6 +33,8 @@ public class AreaDibujo extends JPanel {
 		marco.pack();
 		
 		this.requestFocus();
+		sonido= Sonido.LoadSound("./kitsound.wav");
+	    sonido.loop(Clip.LOOP_CONTINUOUSLY);
 	}
 	
 	public void add(Dibujable obj){
