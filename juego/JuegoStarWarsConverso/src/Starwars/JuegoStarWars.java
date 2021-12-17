@@ -35,7 +35,7 @@ public class JuegoStarWars extends Juego {
 		//añade un enemigo a la array de enemigos, el metodo esta mas abajo
 		//getEnC devuelve una imagen, para que el tipo de enemigo sea al azar, metodo mas abajo
 		// el contador arranca los enemigos
-		while(contador<2){
+		while(contador<3){
 			add(new Enemigo(getEnC(),(int) ((Math.random()*600)+50),(int) ((Math.random()*400)+50),(int) ((Math.random()*40)+40),(int) ((Math.random()*10)+10),(int) ((Math.random()*10)+10)));
 		}
 		puntuacion=new Puntuacion(10,20);
@@ -168,7 +168,7 @@ public class JuegoStarWars extends Juego {
 			puntuacion.setA(puntuacion.getA()+1);
 		}
 		// && puntuacion.getA()>0
-		if((puntuacion.getA()%5)==0){
+		if((puntuacion.getA()%10)==0){
 			jugador.setInvulnerable(true);
 		}else{
 			jugador.setInvulnerable(false);
